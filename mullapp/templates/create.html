@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<form action="" method='POST' enctype="multipart/form-data">
+    <h4>Add Products</h4>
+{% csrf_token %}
+
+<div class="row mb-3">
+    <label class="col-sm-2 col-form-label">{{p_form.name.label}}</label>
+    <div class="col-sm-10">
+      {{p_form.name}}
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <label class="col-sm-2 col-form-label">{{p_form.thumbnail.label}}</label>
+    <div class="col-sm-10">
+      {{p_form.thumbnail}}
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <label class="col-sm-2 col-form-label">{{p_form.description.label}}</label>
+    <div class="col-sm-10">
+      {{p_form.description}}
+    </div>
+  </div>
+
+
+  <div class="row mb-3">
+    <label class="col-sm-2 col-form-label">{{i_form.images.label}}</label>
+    <div class="col-sm-10">
+      {{i_form.images}}
+    </div>
+  </div>
+
+
+  <div class="row mb-3">
+    <label class="col-sm-2 col-form-label">{{p_form.price.label}}</label>
+    <div class="col-sm-10">
+      {{p_form.price}}
+    </div>
+  </div>
+
+  <button class="btn btn-primary">Add</button>
+
+</form>
+    
+{% endblock content %}
+    

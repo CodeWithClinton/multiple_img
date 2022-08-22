@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    
+    
+    <header>
+        <h2>Buy From the Best Online Store in The World</h2>
+    </header>
+
+    <div class="product-container">
+        <div class="container-title">All Products</div>
+        <div class="product-holder">
+           
+            {% for product in products  %}
+            
+            <div class="product">
+                <div class="product-img">
+                    <img src="{{product.thumbnail.url}}" alt="">
+                </div>
+                <h4>{{product.name}}</h4>
+                <p>${{product.price}}</p>
+
+                <a href="{% url 'detail' product.id %}">
+                    <button class = "btn btn-primary">
+                        Read more
+                    </button>
+                </a>
+
+            </div>
+
+            {% endfor %}
+
+           
+
+           
+
+
+        </div>
+    </div>
+
+
+{% endblock content %}
+    
+    <nav>
+        <div class="logo">
+            <h3>Shopp</h3>
+        </div>
+
+        <ul>
+            <li>Username</li>
+            <li>Create</li>
+        </ul>
+    </nav>
+    <header>
+        <h2>Buy From the Best Online Store in The World</h2>
+    </header>
+
+    <div class="product-container">
+        <div class="container-title">All Products</div>
+        <div class="product-holder">
+           
+            <div class="product">
+                <div class="product-img">
+                    <img src="" alt="">
+                </div>
+                <h4>Product</h4>
+                <p>$100</p>
+            </div>
+
+            <div class="product">
+                <div class="product-img">
+                    <img src="" alt="">
+                </div>
+                <h5>Product</h5>
+                <p>$100</p>
+            </div>
+
+            <div class="product">
+                <div class="product-img">
+                    <img src="" alt="">
+                </div>
+                <h5>Product</h5>
+                <p>$100</p>
+            </div>
+
+
+            <div class="product">
+                <div class="product-img">
+                    <img src="" alt="">
+                </div>
+                <h5>Product</h5>
+                <p>$100</p>
+            </div>
+
+
+            <div class="product">
+                <div class="product-img">
+                    <img src="" alt="">
+                </div>
+                <h5>Product</h5>
+                <p>$100</p>
+            </div>
+
+
+        </div>
+    </div>
+
